@@ -1,0 +1,47 @@
+<style>
+    .form__field>label:after {
+        content: ": ";
+    }
+
+    .form__field--textarea>textarea {
+        display: block;
+    }
+</style>
+
+<form class="form">
+    <div class="form__field">
+        <label>Name</label>
+        <input required type="text" />
+    </div>
+
+    <div class="form__field">
+        <label>Email</label>
+        <input type="email" />
+    </div>
+
+    <div class="form__field form__field--select">
+        <label>RSVP</label>
+        <select required onchange="handleRSVPSelect">
+            <option selected value="">Will you be attending?</option>
+            <option>Attending</option>
+            <option>Not Attending</option>
+        </select>
+    </div>
+
+    <div class="form__field">
+        <label>Guest Count</label>
+        <input type="number" step="1" />
+    </div>
+
+    <div class="form__field form__field--textarea">
+        <label>Dietary Restrictions/Allergies</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="form__field">
+        <label>Song Request</label>
+        <input type="text" />
+    </div>
+
+    <button class="form__submit" type="submit">Submit</button>
+</form>
